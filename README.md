@@ -1,0 +1,1 @@
+# chiangmai-trip-data
