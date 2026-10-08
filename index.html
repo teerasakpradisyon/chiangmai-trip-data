@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chiang Mai Trip 9–13 ต.ค.</title>
+<style>
+:root{--bg:#efe6d6;--bg2:#d9c7a4;--ink:#1b1b1b;--mute:#707070;--acc:#0e9aa7;--line:#e6e6e6;--chip:#f3f3f3;--hd:#2a2012;--w:min(320px,78vw);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120d08;--bg2:#2e2112;--hd:#f4ead8}}
+:root[data-theme="dark"]{--bg:#120d08;--bg2:#2e2112;--hd:#f4ead8}
+*{box-sizing:border-box;scrollbar-width:none;-ms-overflow-style:none}
+*::-webkit-scrollbar{display:none;width:0;height:0}
+html,body{margin:0;height:100%}
+body{background:radial-gradient(ellipse at 50% 30%,var(--bg2),var(--bg) 70%);color:var(--ink);font-family:Inter,"Noto Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column;overflow:hidden}
+header{text-align:center;padding:14px 16px 0;color:var(--hd)}
+header h1{margin:0;font-size:20px}
+header p{margin:3px 0 0;font-size:12px;opacity:.75}
+.deck{flex:1;min-height:0;display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:18px calc(50% - var(--w)/2) 12px;align-items:center;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.deck::-webkit-scrollbar{display:none}
+.day{flex:0 0 var(--w);height:min(100%,640px);scroll-snap-align:center;background:#fff;border-radius:28px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.hero{flex:0 0 auto;height:112px;display:flex;align-items:flex-end;justify-content:space-between;padding:12px 18px;color:#fff;margin:8px 8px 0;border-radius:22px}
+.hero .n{font-size:54px;font-weight:800;line-height:.9}
+.hero .m{text-align:right;font-size:14px;font-weight:600;line-height:1.3}
+.dh{padding:12px 20px 4px}
+.dh h2{margin:0;font-size:19px}
+.dh p{margin:3px 0 0;font-size:12px;color:var(--mute)}
+.list{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:6px 16px 10px 20px;touch-action:pan-y}
+.it{display:flex;gap:12px;width:100%;border:0;background:none;text-align:left;font:inherit;color:inherit;padding:8px 0;cursor:pointer;position:relative}
+.it::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:2px;background:var(--line)}
+.tm{flex:0 0 52px;height:26px;border-radius:13px;background:var(--acc);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;position:relative;z-index:1;margin-top:2px}
+.tm.no{background:#aaa}
+.bd{flex:1;min-width:0;background:var(--chip);border-radius:14px;padding:8px 12px}
+.bd b{display:block;font-size:14px;word-break:break-word}
+.bd .nt{display:block;font-size:12px;color:var(--mute);margin:1px 0 2px}
+.bd small{color:var(--acc);font-weight:600;font-size:11px}
+.none{color:var(--mute);font-size:13px;text-align:center;padding:26px 8px}
+.ft{flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;padding:10px 20px 16px;border-top:1px solid var(--line)}
+.ft span{font-size:12px;color:var(--mute)}.ft b{display:block;font-size:17px}
+.plus{width:48px;height:48px;border-radius:50%;border:0;background:#1b1b1b;color:#fff;font-size:26px;cursor:pointer;line-height:1}
+.nav{display:flex;justify-content:center;align-items:center;gap:14px;padding:0 0 14px}
+.dots{display:flex;gap:7px}.dots i{width:8px;height:8px;border-radius:50%;background:var(--hd);opacity:.3;transition:.2s}.dots i.on{opacity:1;width:22px;border-radius:5px}
+.ar{width:34px;height:34px;border-radius:50%;border:0;background:rgba(128,128,128,.25);color:var(--hd);font-size:14px;cursor:pointer}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:9}
+.ov.on{display:flex}
+.sheet{background:#fff;border-radius:24px;padding:22px;width:100%;max-width:400px;max-height:92%;overflow:auto}
+.sheet h3{margin:0 0 4px;font-size:19px;word-break:break-word}
+.sheet label{display:block;font-size:12px;color:var(--mute);margin:12px 0 4px}
+.sheet input,.sheet select{width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:var(--chip);color:var(--ink);font:inherit;font-size:15px}
+.meta{color:var(--mute);font-size:12px;margin-top:4px}
+.url{color:var(--mute);font-size:12px;word-break:break-all;margin-top:6px}
+.trow{display:flex;align-items:center;gap:10px}.trow b{font-size:22px}.trow select{font-size:22px!important;text-align:center;padding:12px 8px!important}
+.btns{display:flex;gap:10px;margin-top:18px}
+.b{flex:1;border:0;border-radius:14px;padding:13px;font:inherit;font-weight:600;cursor:pointer;background:var(--chip);color:var(--ink)}
+.b{text-align:center;text-decoration:none;display:block}
+.b.p{background:var(--acc);color:#fff}.b.d{background:#d64545;color:#fff;flex:0 0 auto}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#222;color:#fff;padding:10px 16px;border-radius:14px;font-size:13px;display:none;z-index:10;max-width:90%}
+.note{display:none;margin:8px auto 0;background:rgba(128,128,128,.25);border-radius:12px;padding:6px 12px;font-size:12px;max-width:90%}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏔️ เชียงใหม่ · 9–13 ตุลาคม 2026</h1>
+  <p>สไลด์ซ้าย–ขวาเลือกวัน · เลื่อนขึ้น–ลงดูแผนในวันนั้น</p>
+  <button class="ar" id="share" style="width:auto;padding:6px 14px;margin-top:8px;font-size:12px">🔗 คัดลอกลิงก์ให้เพื่อน</button>
+  <div class="note" id="note">เชื่อมต่อฐานข้อมูลไม่ได้ ตรวจว่า Realtime Database เปิดเป็น test mode แล้ว แล้วรีเฟรช</div>
+</header>
+<div class="deck" id="deck"></div>
+<div class="nav"><button class="ar" id="pv">◀</button><div class="dots" id="dots"></div><button class="ar" id="nx">▶</button></div>
+<div class="ov" id="ov"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const DAYS=[["2026-10-09","ศุกร์","9"],["2026-10-10","เสาร์","10"],["2026-10-11","อาทิตย์","11"],["2026-10-12","จันทร์","12"],["2026-10-13","อังคาร","13"]];
+const THEMES=["เมืองเก่า","วัด + นิมมาน","แม่แตง","เดินทางกลับ","วันสุดท้าย"];
+const HUES=[185,28,265,340,130];
+let plans=[],cur=0,db=null;
+const $=id=>document.getElementById(id);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+function toast(m){const t=$("toast");t.textContent=m;t.style.display="block";clearTimeout(toast.h);toast.h=setTimeout(()=>t.style.display="none",3500)}
+function guess(u){try{const x=new URL(u);const m=x.pathname.match(/\/maps\/place\/([^/]+)/);if(m)return decodeURIComponent(m[1].replace(/\+/g," "));const q=x.searchParams.get("q")||x.searchParams.get("query");if(q)return q}catch(e){}return""}
+function okUrl(u){try{return/^https?:$/.test(new URL(u).protocol)}catch(e){return false}}
+const whoOf=p=>p.editor||"nest";
+const deck=$("deck");
+
+DAYS.forEach(([d,w,n],i)=>{
+  const c=el("div","day");
+  const h=el("div","hero");h.style.background=`linear-gradient(135deg,hsl(${HUES[i]} 60% 58%),hsl(${(HUES[i]+55)%360} 62% 38%))`;
+  const m=el("div","m");m.append("ตุลาคม",document.createElement("br"),"2026");
+  h.append(el("div","n",n),m);
+  const dh=el("div","dh");dh.append(el("h2",0,"วัน"+w+"ที่ "+n+" ต.ค."),el("p"));
+  const l=el("div","list");
+  const f=el("div","ft");const t=el("div");t.append(el("span",0,"แผนทั้งหมด"),el("b"));
+  const p=el("button","plus","+");p.title="เพิ่มแผน";p.onclick=()=>openForm(null,d);
+  f.append(t,p);c.append(h,dh,l,f);
+  c.onclick=e=>{if(i!==cur&&!e.target.closest(".plus"))goTo(i)};
+  deck.append(c);$("dots").append(el("i"));
+});
+
+function renderLists(){
+  [...deck.children].forEach((c,i)=>{
+    const d=DAYS[i][0];
+    const ps=plans.filter(p=>p.day===d).sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99")||(a.at||0)-(b.at||0));
+    c.querySelector(".dh p").textContent=THEMES[i]+(ps.length?"":" · ยังไม่มีแผน กด + เพื่อเพิ่ม");
+    c.querySelector(".ft b").textContent=ps.length+" แผน";
+    const l=c.querySelector(".list");l.textContent="";
+    if(!ps.length)l.append(el("div","none","🗺️ วันนี้ยังว่างอยู่"));
+    ps.forEach(p=>{
+      const r=el("button","it");
+      r.append(el("div","tm"+(p.time?"":" no"),p.time||"--:--"));
+      const b=el("div","bd");b.append(el("b",0,p.title||"สถานที่"));if(p.note)b.append(el("span","nt",p.note));b.append(el("small",0,whoOf(p)));
+      r.append(b);r.onclick=()=>openMenu(p);l.append(r);
+    });
+  });
+}
+function fx(){
+  const r=deck.getBoundingClientRect(),mid=r.left+r.width/2;let best=0,bd=1e9;
+  [...deck.children].forEach((c,i)=>{
+    const q=c.getBoundingClientRect(),d=Math.abs(q.left+q.width/2-mid),k=Math.min(d/q.width,1);
+    c.style.transform=`scale(${1-k*.14})`;c.style.opacity=1-k*.45;
+    if(d<bd){bd=d;best=i}
+  });
+  cur=best;[...$("dots").children].forEach((x,i)=>x.classList.toggle("on",i===best));
+}
+function goTo(i,instant){
+  i=Math.max(0,Math.min(DAYS.length-1,i));const c=deck.children[i];
+  deck.scrollTo({left:c.offsetLeft-(deck.clientWidth-c.offsetWidth)/2,behavior:instant?"auto":"smooth"});
+}
+deck.addEventListener("scroll",()=>requestAnimationFrame(fx),{passive:true});
+$("pv").onclick=()=>goTo(cur-1);$("nx").onclick=()=>goTo(cur+1);
+document.addEventListener("keydown",e=>{if($("ov").classList.contains("on"))return;if(e.key==="ArrowLeft")goTo(cur-1);if(e.key==="ArrowRight")goTo(cur+1)});
+
+function show(){$("ov").classList.add("on")}
+function hide(){$("ov").classList.remove("on")}
+$("ov").onclick=e=>{if(e.target.id==="ov")hide()};
+function openMenu(p){
+  const s=$("sheet");s.textContent="";
+  s.append(el("h3",0,p.title||"สถานที่"),el("div","meta",p.note||""),el("div","meta","🕒 "+(p.time||"ไม่ระบุเวลา")+" · โดย "+whoOf(p)),el("div","url",p.url));
+  const r=el("div","btns");
+  const e=el("button","b","✏️ Edit");e.onclick=()=>openForm(p);
+  const g=el("a","b p","Go... ➤");if(okUrl(p.url)){g.href=p.url;g.target="_blank";g.rel="noopener noreferrer"}g.onclick=()=>{setTimeout(hide,300)};
+  r.append(e,g);s.append(r);show();
+}
+function openForm(p,d0){
+  const s=$("sheet");s.textContent="";
+  s.append(el("h3",0,p?"แก้ไขแผน":"เพิ่มแผน"));
+  const mk=(lab,inp)=>{s.append(el("label",0,lab),inp);return inp};
+  const url=mk("ลิงก์ Google Maps",el("input"));url.type="url";url.placeholder="https://maps.app.goo.gl/...";url.value=p?p.url:"";
+  const ti=mk("ชื่อสถานที่ (เว้นว่างได้ ถ้าเป็นลิงก์ยาวจะดึงชื่อให้)",el("input"));ti.value=p?p.title||"":"";
+  const nt=mk("โน้ตสั้นๆ (ไม่บังคับ)",el("input"));nt.value=p?p.note||"":"";
+  s.append(el("label",0,"เวลา"));
+  const tr=el("div","trow");
+  const hh=el("select"),mm=el("select");
+  for(let i=0;i<24;i++){const o=el("option",0,String(i).padStart(2,"0"));o.value=o.textContent;hh.append(o)}
+  for(let i=0;i<60;i+=5){const o=el("option",0,String(i).padStart(2,"0"));o.value=o.textContent;mm.append(o)}
+  let t0=p&&p.time?p.time:"09:00";
+  let [h0,m0]=t0.split(":");m0=String(Math.round(+m0/5)*5%60).padStart(2,"0");
+  hh.value=h0;mm.value=m0;
+  tr.append(hh,el("b",0,":"),mm);s.append(tr);
+  const tm={get value(){return hh.value+":"+mm.value}};
+  const dy={get value(){return p?p.day:d0}};
+  let last="nest";try{last=localStorage.getItem("editor")||"nest"}catch(e){}
+  const ed=mk("ชื่อคนเพิ่ม/แก้ไข",el("input"));ed.maxLength=20;ed.value=last;
+  const r=el("div","btns");
+  const c=el("button","b","ยกเลิก");c.onclick=hide;
+  const sv=el("button","b p","บันทึก");
+  sv.onclick=async()=>{
+    const u=url.value.trim();
+    if(!okUrl(u)){toast("กรุณาใส่ลิงก์ที่ขึ้นต้นด้วย http(s)://");return}
+    if(!tm.value){toast("กรุณาใส่เวลา เพื่อให้เรียงลำดับได้");return}
+    const data={day:dy.value,time:tm.value,note:nt.value.trim(),editor:ed.value.trim()||"nest",url:u,title:ti.value.trim()||guess(u)||"สถานที่จาก Google Maps"};
+    if(!db){toast("ยังไม่ได้เชื่อมต่อฐานข้อมูล");return}
+    try{localStorage.setItem("editor",data.editor)}catch(e){}
+    try{
+      const id=p?p.id:"p"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+      await api.put(id,{...(p||{}),...data,at:p?p.at:Date.now()});
+      hide();await pull();
+    }catch(e){toast("บันทึกไม่ได้ ลองใหม่อีกครั้ง")}
+  };
+  r.append(c,sv);
+  if(p){const x=el("button","b d","🗑");x.onclick=async()=>{
+    try{await api.del(p.id);hide();await pull()}catch(e){toast("ลบไม่ได้ ลองใหม่อีกครั้ง")}};r.prepend(x)}
+  s.append(r);show();
+}
+const SEED=[
+[9,"16:00","วัดเจดีย์หลวง","เจดีย์ใหญ่ แสงเย็นสวย"],[9,"17:00","วัดพระสิงห์","สถาปัตย์ล้านนา"],[9,"17:45","Akha Ama Coffee","คาเฟ่ใกล้วัดพระสิงห์"],[9,"19:00","อาหารเหนือมื้อเย็น","ข้าวซอย / ฮือนเฮือนเพ็ญ","ฮือนเฮือนเพ็ญ"],
+[10,"08:30","วัดผาลาด","วัดกลางป่า ไปเช้าที่จอดง่าย (ตามที่ขอ)"],[10,"10:30","วัดอุโมงค์","วัดโบราณในร่มไม้"],[10,"11:30","บ้านช้างวัด","หมู่บ้านศิลปิน คาเฟ่ ร้านคราฟต์"],[10,"14:00","คาเฟ่นิมมานเหมินท์","Ristr8to Lab / Rustic & Blue","Ristr8to Lab"],[10,"18:00","ถนนคนเดินวัวลาย","เฉพาะวันเสาร์"],
+[11,"09:00","น้ำตกบัวตอง","น้ำตกเดินขึ้นได้ ไม่ขึ้นดอย"],[11,"12:30","วัดบ้านเด่น","วัดใหญ่ ร่มรื่น"],[11,"14:30","คาเฟ่ระหว่างทางกลับ","แถวแมริม / แม่แตง","คาเฟ่ แม่ริม"],[11,"17:30","ถนนคนเดินท่าแพ","เฉพาะวันอาทิตย์"],
+[12,"09:00","วัดสวนดอก","เจดีย์ขาว ลานถ่ายรูปสวย"],[12,"10:30","คาเฟ่ริมแม่น้ำปิง","The Baristro Ping River","The Baristro Ping River"],[12,"12:00","ซื้อของฝาก","ตลาดวโรรส"]];
+function seedObj(){const o={};SEED.forEach((x,i)=>{o["seed-"+String(i+1).padStart(2,"0")]={day:"2026-10-"+String(x[0]).padStart(2,"0"),time:x[1],title:x[2],note:x[3],editor:"แผนตั้งต้น",at:i+1,url:"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((x[4]||x[2])+" เชียงใหม่")}});return o}
+
+const REPO="teerasakpradisyon/chiangmai-trip-data",FILE="plans.json",LK="plans_local";
+let TOKEN="";
+const loc={get(){try{return JSON.parse(localStorage.getItem(LK)||"null")}catch(e){return null}},set(o){try{localStorage.setItem(LK,JSON.stringify(o))}catch(e){}}};
+const enc=t=>btoa(unescape(encodeURIComponent(t)));
+const dec=b=>decodeURIComponent(escape(atob(b.replace(/\s/g,""))));
+const ghf=(method,body)=>fetch("https://api.github.com/repos/"+REPO+"/contents/"+FILE,{method,cache:"no-store",headers:{Authorization:"Bearer "+TOKEN,Accept:"application/vnd.github+json","Content-Type":"application/json"},body:body?JSON.stringify(body):undefined});
+async function readRemote(){
+  const r=await ghf("GET");
+  if(r.status===404)return{data:null,sha:null};
+  if(!r.ok)throw r.status;
+  const j=await r.json();return{data:JSON.parse(dec(j.content)),sha:j.sha};
+}
+async function mutate(fn){
+  for(let i=0;i<4;i++){
+    const{data,sha}=await readRemote();const o=data||{plans:{}};if(!o.plans)o.plans={};
+    fn(o);
+    const body={message:"update plans",content:enc(JSON.stringify(o))};if(sha)body.sha=sha;
+    const r=await ghf("PUT",body);
+    if(r.ok)return;
+    if(r.status!==409&&r.status!==422)throw r.status;
+  }
+  throw 409;
+}
+const api={
+  async all(){if(db==="local")return loc.get();const{data}=await readRemote();return data?data.plans:null},
+  async put(id,o){const {id:_,...x}=o;if(db==="local"){const m=loc.get()||{};m[id]=x;loc.set(m);return}await mutate(m=>{m.plans[id]=x})},
+  async del(id){if(db==="local"){const m=loc.get()||{};delete m[id];loc.set(m);return}await mutate(m=>{delete m.plans[id]})}
+};
+async function pull(){
+  try{const j=await api.all();plans=j?Object.entries(j).map(([id,v])=>({id,...v})):[];renderLists()}catch(e){}
+}
+async function seedIfNew(){
+  if(db==="local"){if(!localStorage.getItem("seeded_local")){loc.set(seedObj());localStorage.setItem("seeded_local","1")}return}
+  const{data}=await readRemote();
+  if(!data||!data.seeded)await mutate(m=>{if(!m.seeded){m.seeded=true;Object.assign(m.plans,seedObj())}});
+}
+$("share").onclick=async()=>{
+  const l=location.origin+location.pathname+"#t="+TOKEN;
+  try{await navigator.clipboard.writeText(l);toast("คัดลอกลิงก์แล้ว ส่งให้เพื่อนได้เลย")}catch(e){prompt("คัดลอกลิงก์นี้ส่งให้เพื่อน",l)}
+};
+renderLists();
+{const t=new Date().toISOString().slice(0,10),i=DAYS.findIndex(x=>x[0]===t);setTimeout(()=>{goTo(i<0?0:i,true);fx()},50)}
+(async()=>{
+  let t=new URLSearchParams(location.hash.slice(1)).get("t");
+  if(t){try{localStorage.setItem("ghtoken",t)}catch(e){}history.replaceState(null,"",location.pathname+location.search)}
+  else{try{t=localStorage.getItem("ghtoken")}catch(e){}}
+  if(t){TOKEN=t;db="gh"}else{db="local";$("share").style.display="none"}
+  try{await seedIfNew()}catch(e){if(db==="gh")toast("เชื่อม GitHub ไม่ได้ ตรวจโทเคนและชื่อ repo")}
+  await pull();
+  if(db==="gh")setInterval(()=>{if(!document.hidden)pull()},10000);
+})();
+</script>
+</body>
+</html>
